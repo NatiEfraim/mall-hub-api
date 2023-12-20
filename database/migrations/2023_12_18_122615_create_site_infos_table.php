@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->text("about", 50000);
             $table->text("refund", 50000);
-            $table->text("parchase_guid", 50000);
+            $table->text("parchase_guide", 50000);
             $table->text("privacy", 50000);
             $table->text("address", 50000);
             $table->string("android_app_link");
