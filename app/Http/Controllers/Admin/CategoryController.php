@@ -20,7 +20,7 @@ class CategoryController extends Controller
             $item = [
                 "category_name" => $value["category_name"],
                 "category_image" => $value["category_image"],
-                "category_name" => $subcategory,
+                "subcategory_name" => $subcategory,
             ];
             array_push($categoryDetailsArray, $item); ///add to the aaray details.
         }
