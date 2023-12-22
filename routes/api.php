@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\admin\ContactController;
 use App\Http\Controllers\Admin\SiteInfoController;
 use Illuminate\Http\Request;
@@ -25,3 +26,5 @@ Route::get("/getvisitor", [VisitorController::class, "GetVisitorDetails"]);
 Route::post("/postcontact", [ContactController::class, "PostContactDetails"]);
 ///Get request site info
 Route::get("/allsiteinfo", [SiteInfoController::class, "AllSiteInfo"]);
+///Get request category
+Route::get("/allcategory", [CategoryController::class, "AllCategory"]);
