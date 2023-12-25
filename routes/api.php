@@ -2,10 +2,12 @@
 
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\admin\ContactController;
+use App\Http\Controllers\Admin\ProductListController;
 use App\Http\Controllers\Admin\SiteInfoController;
-use Illuminate\Http\Request;
+// use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\VisitorController;
+
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -28,3 +30,9 @@ Route::post("/postcontact", [ContactController::class, "PostContactDetails"]);
 Route::get("/allsiteinfo", [SiteInfoController::class, "AllSiteInfo"]);
 ///Get request category
 Route::get("/allcategory", [CategoryController::class, "AllCategory"]);
+///Get request ProductList Route
+Route::get("/productlistbyremark/{remark}", [ProductListController::class, "ProductListByRemark"]);
+///Get request ProductCategory Route
+Route::get("/productlistbycategory/{category}", [ProductListController::class, "ProductListByCategory"]);
+///Get request ProductSubcategory Route
+Route::get("/productlistbysubcategory/{category}/{subcategory}", [ProductListController::class, "ProductListBySubCategory"]);
