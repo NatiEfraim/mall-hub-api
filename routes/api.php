@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\admin\ContactController;
+use App\Http\Controllers\Admin\ProductDetailsController;
 use App\Http\Controllers\Admin\ProductListController;
 use App\Http\Controllers\Admin\SiteInfoController;
 use App\Http\Controllers\Admin\SliderController;
@@ -39,3 +40,5 @@ Route::get("/productlistbycategory/{category}", [ProductListController::class, "
 Route::get("/productlistbysubcategory/{category}/{subcategory}", [ProductListController::class, "ProductListBySubCategory"]);
 ///Get request allSlider Route
 Route::get("/allslider", [SliderController::class, "AllSlider"]);
+///Get request PeoductDetails Route
+Route::get("/productdetails/{id}", [ProductDetailsController::class, "ProductDetails"]);
