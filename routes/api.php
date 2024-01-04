@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\admin\ContactController;
+use App\Http\Controllers\Admin\NotificationController;
 use App\Http\Controllers\Admin\ProductDetailsController;
 use App\Http\Controllers\Admin\ProductListController;
 use App\Http\Controllers\Admin\SiteInfoController;
@@ -42,3 +43,7 @@ Route::get("/productlistbysubcategory/{category}/{subcategory}", [ProductListCon
 Route::get("/allslider", [SliderController::class, "AllSlider"]);
 ///Get request PeoductDetails Route
 Route::get("/productdetails/{id}", [ProductDetailsController::class, "ProductDetails"]);
+///Get request allNotification Route
+Route::get("/notification", [NotificationController::class, "NotificationHistory"]);
+///Get request searc Route
+Route::get("/search/{key}", [ProductListController::class, "ProductBySearch"]);
